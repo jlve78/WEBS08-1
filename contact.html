@@ -5,13 +5,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>santo Domingo Savio</title>
+  <title>SDS-Contactos</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
   <link href="css/style.css" rel="stylesheet">
   <!-- =======================================================
     Theme Name: MeFamily
@@ -32,140 +34,75 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-        <a class="navbar-brand" href="index.html"><span>Santo Domingo Savio</span></a>
+        <a class="navbar-brand" href="index.html"><span>Santo Domingo savio</span></a>
       </div>
       <div class="navbar-collapse collapse">
         <div class="menu">
           <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="index.html">Inicio</a></li>
+            <li role="presentation"><a href="index.html">Inicio</a></li>
             <li role="presentation"><a href="ourstory.html">Historia</a></li>
             <li role="presentation"><a href="events.html">Eventos</a></li>
             <li role="presentation"><a href="gallery.html">Galeria</a></li>
-            <li role="presentation"><a href="contact.html">Contactos</a></li>
+            <li role="presentation" class="active"><a href="contact.html">Contactos</a></li>
           </ul>
         </div>
       </div>
     </div>
   </nav>
 
-  <div class="slider">
-    <div class="img-responsive">
-      <ul class="bxslider">
-        <li><img src="img/08.jpg" alt="" /></li>
-        <li><img src="img/9.jpg" alt="" /></li>
-        <li><img src="img/7.jpg" alt="" /></li>
-      </ul>
-    </div>
+  <div class="breadcrumb">
+    <h2>Contactos</h2>
   </div>
 
-  <div class="jumbotron">
-    <h1>Nuestra Familia Dominguina</h1>
-    <p>
-      La enseñanza esta orientada, principalmente, al desarrollo de competencias y capacidades que favorecen en los niños de tres años la afirmación y construcción de su identidad, reconociéndose 
-		<br> a sí mismos, valorándola y valorándose, y alcanzando,además, una mayor autorregulación de sus actitudes para relacionarse con los otros.
-    </p>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.3926792491543!2d-77.08537078561838!3d-12.01646474460826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce946840f33d%3A0x1c70de912b8814cf!2sI.E.P+%22SANTO+DOMINGO+SAVIO%22!5e0!3m2!1ses-419!2spe!4v1558895620033!5m2!1ses-419!2spe" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 
   <div class="container">
-    <div class="col-md-6">
-      <img src="img/10.jpg" alt="" class="img-responsive" />
-    </div>
-    <div class="col-md-6">
-      <img src="img/11.jpg" alt="" class="img-responsive" />
-    </div>
-  </div>
-  <section class="box">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
-            <div class="services">
-              <div class="icons">
-                <i class="fa fa-heart-o fa-3x"></i>
-              </div>
-              <h4>Inicial</h4>
-              <p>
-                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
-              </p>
-            </div>
-          </div>
-          <hr>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="recent">
+          <h3>Contactanos</h3>
         </div>
+        <div id="sendmessage">Your message has been sent. Thank you!</div>
+        <div id="errormessage"></div>
+        <form action="" method="post" role="form" class="contactForm">
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <div class="validation"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+            <div class="validation"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Tema" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+            <div class="validation"></div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
+            <div class="validation"></div>
+          </div>
 
-        <div class="col-md-4">
-          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.8s">
-            <div class="services">
-              <div class="icons">
-                <i class="fa fa-desktop fa-3x"></i>
-              </div>
-              <h4>Primaria</h4>
-              <p>
-                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
-              </p>
-            </div>
-          </div>
-          <hr>
-        </div>
+          <div class="text-center"><button type="submit" class="btn btn-primary btn-lg">Send Message</button></div>
+        </form>
+      </div>
 
-        <div class="col-md-4">
-          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.2s">
-            <div class="services">
-              <div class="icons">
-                <i class="fa fa-thumbs-o-up fa-3x"></i>
-              </div>
-              <h4>Secundaria</h4>
-              <p>
-                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
-              </p>
-            </div>
-          </div>
-          <hr>
+      <div class="col-lg-6">
+        <div class="recent">
+          <h3>Póngase en contacto con nosotros</h3>
         </div>
-        <div class="col-md-4">
-          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
-            <div class="services">
-              <div class="icons">
-                <i class="fa fa-leaf fa-3x"></i>
-              </div>
-              <h4>Nuestros Logros</h4>
-              <p>
-                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
-              </p>
-            </div>
-          </div>
-          <hr>
-        </div>
-        <div class="col-md-4">
-          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.8s">
-            <div class="services">
-              <div class="icons">
-                <i class="fa fa-laptop fa-3x"></i>
-              </div>
-              <h4>Free Support</h4>
-              <p>
-                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
-              </p>
-            </div>
-          </div>
-          <hr>
-        </div>
-        <div class="col-md-4">
-          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.2s">
-            <div class="services">
-              <div class="icons">
-                <i class="fa fa-camera fa-3x"></i>
-              </div>
-              <h4>Nuestras Fotos</h4>
-              <p>
-                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
-              </p>
-            </div>
-          </div>
-          <hr>
+        <div class="">
+          <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum.</p>
+          <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum.</p>
+
+          <h4>Address:</h4> Mz X Lote 12 Cooperativa Cesar Vallejo<br>
+          <h4>Telefono:</h4>01 567-6868</br>
+          
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <footer>
     <div class="inner-footer">
@@ -177,7 +114,7 @@
 
           </div>
           <div class="col-md-4 l-posts">
-            <h3 class="widgetheading">Otras Publicaciones</h3>
+            <h3 class="widgetheading">Latest Posts</h3>
             <ul>
               <li><a href="#">This is awesome post title</a></li>
               <li><a href="#">Awesome features are awesome</a></li>
@@ -186,12 +123,12 @@
             </ul>
           </div>
           <div class="col-md-4 f-contact">
-            <h3 class="widgetheading" align="center">Contactanos</h3>
+            <h3 class="widgetheading">Contactanos</h3>
             <a href="#">
               <p><i class="fa fa-envelope"></i> sds2019@hotmail.com</p>
             </a>
             <p><i class="fa fa-phone"></i> +051 567 6868</p>
-            <p><i class="fa fa-home"></i> SDS | Mz X Lote 12 Cooperativa Cesar Vallejo <br>	San Martin de Pores - Condevilla</p>
+            <p><i class="fa fa-home"></i> SDS | Mz X Lote 12 Cooperativa Cesar Vallejo <br> San Martin de Pores - Condevilla</p>
           </div>
         </div>
       </div>
@@ -239,6 +176,7 @@
   <script>
     wow = new WOW({}).init();
   </script>
+  <script src="contactform/contactform.js"></script>
 
 </body>
 
